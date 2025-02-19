@@ -1,0 +1,39 @@
+<div class="relative flex justify-between p-4 border-b-1 border-gray-300" (clickOutside)="closeDropdown()">
+  <!-- Dropdown Button -->
+  <button (click)="toggleDropdown()" class="w54"
+    class="w-full bg-white px-4 py-2 flex flex-row gap-2 items-center text-base">
+    <span class="text-gray-900">John Smith</span>
+    <span class="text-gray-500 text-base">
+      @if(isOpen){
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        </svg>
+
+      }
+      @else {
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+
+      }
+    </span>
+  </button>
+
+  <!-- Dropdown Menu -->
+   @if(isOpen){
+  <div class="absolute w-60 mt-2 bg-white border border-gray-300 rounded-md shadow-lg overflow-hidden mt-12">
+    <ul class="text-base">
+      <li class="flex justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">Robert Lindley <span class="text-gray-500">13:43</span></li>
+      <li class="flex justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">Jane Smith <span class="text-gray-500">13:16</span></li>
+      <li class="flex justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">Chris Thompson <span class="text-gray-500">12:55</span></li>
+      <li class="flex justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">Aaminah Carlson <span class="text-gray-500">12:21</span></li>
+      <li class="flex justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">Sufyan Caldwell <span class="text-gray-500">11:58</span></li>
+    </ul>
+  </div>
+}
+<button class="px-4 py-2 border-1 border-gray-300 rounded-lg flex items-center gap-2 whitespace-nowrap">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+  </svg>
+   <span>New Notes</span></button>
+</div>
